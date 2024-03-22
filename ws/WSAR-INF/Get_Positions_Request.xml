@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<env:Envelope
+	xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<env:Body>
+		<wd:Get_Positions_Request
+			xmlns:wd="urn:com.workday/bsvc" wd:version="v40.0">
+			<wd:Request_References
+                wd:Skip_Non_Existing_Instances="true"
+                wd:Ignore_Invalid_References="true">
+				<wd:Positions_Reference>
+					<wd:ID wd:type="Position_ID">00612220</wd:ID>
+				</wd:Positions_Reference>
+			</wd:Request_References>
+			<wd:Request_Criteria>
+				<wd:Transaction_Log_Criteria_Data>
+					<wd:Transaction_Date_Range_Data>
+						<wd:Updated_From>2024-03-18T10:16:41</wd:Updated_From>
+						<wd:Updated_Through>2024-03-18T10:16:41</wd:Updated_Through>
+						<wd:Effective_From>2024-03-18T10:16:41</wd:Effective_From>
+						<wd:Effective_Through>2024-03-18T10:16:41</wd:Effective_Through>
+					</wd:Transaction_Date_Range_Data>
+					<wd:Transaction_Type_References>
+						<wd:Transaction_Type_Reference>
+							<wd:ID wd:type="Business_Process_Type">Change Visibility</wd:ID>
+						</wd:Transaction_Type_Reference>
+					</wd:Transaction_Type_References>
+				</wd:Transaction_Log_Criteria_Data>
+				<wd:Supervisory_Organization_Reference>
+					<wd:ID wd:type="Organization_Reference_ID">37036</wd:ID>
+				</wd:Supervisory_Organization_Reference>
+				<wd:Exclude_Filled_Positions>true</wd:Exclude_Filled_Positions>
+				<wd:Exclude_Non-Recruitable_Positions>true</wd:Exclude_Non-Recruitable_Positions>
+				<wd:Ignore_Future_Positions>true</wd:Ignore_Future_Positions>
+				<wd:Include_Closed_Positions>true</wd:Include_Closed_Positions>
+				<wd:Show_Only_Closed_Positions>true</wd:Show_Only_Closed_Positions>
+				<wd:Location_Reference>
+					<wd:ID wd:type="Location_ID">L000</wd:ID>
+				</wd:Location_Reference>
+				<wd:Additional_Locations_Reference>
+					<wd:ID wd:type="Location_ID">L000</wd:ID>
+				</wd:Additional_Locations_Reference>
+			</wd:Request_Criteria>
+			<wd:Response_Filter>
+				<wd:As_Of_Effective_Date>2024-03-18</wd:As_Of_Effective_Date>
+				<wd:As_Of_Entry_DateTime>2024-03-18T10:16:41</wd:As_Of_Entry_DateTime>
+				<wd:Page>1</wd:Page>
+				<wd:Count>100</wd:Count>
+			</wd:Response_Filter>
+			<wd:Response_Group>
+				<wd:Include_Reference>true</wd:Include_Reference>
+				<wd:Include_Position_Definition_Data>true</wd:Include_Position_Definition_Data>
+				<wd:Include_Position_Restrictions_Data>true</wd:Include_Position_Restrictions_Data>
+				<wd:Include_Position_Restriction_Working_Hours_Details_Data>true</wd:Include_Position_Restriction_Working_Hours_Details_Data>
+				<wd:Include_Default_Compensation_Data>true</wd:Include_Default_Compensation_Data>
+				<wd:Include_Default_Position_Organization_Assignment_Data>true</wd:Include_Default_Position_Organization_Assignment_Data>
+				<wd:Include_Worker_For_Filled_Positions_Data>true</wd:Include_Worker_For_Filled_Positions_Data>
+				<wd:Include_Qualifications>true</wd:Include_Qualifications>
+				<wd:Include_Job_Requisition_Data>true</wd:Include_Job_Requisition_Data>
+				<wd:Include_Job_Requisition_Attachments>true</wd:Include_Job_Requisition_Attachments>
+			</wd:Response_Group>
+		</wd:Get_Positions_Request>
+	</env:Body>
+</env:Envelope>
