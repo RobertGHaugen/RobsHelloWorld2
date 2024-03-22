@@ -60,7 +60,6 @@
                         <cc:text>@{props['pLastName']}</cc:text>
                     </cc:log-message>
                 </cc:log>
-                <cc:cloud-log id="CloudLog" message="This integration was run for @{props['pFirstName']}  @{props['pLastName']}" output-file-type="HTML"/>
             </cc:steps>
         </cc:async-mediation>
 	</cc:assembly>
