@@ -10,6 +10,12 @@
   <visualProperties x="428" y="182">
     <element href="assembly.xml#AsyncMediation"/>
   </visualProperties>
+  <visualProperties x="563" y="247">
+    <element href="assembly.xml#AsyncMediation0"/>
+  </visualProperties>
+  <visualProperties x="590" y="238">
+    <element href="assembly.xml#//@beans/@mixed.1/@mixed.9"/>
+  </visualProperties>
   <connections type="routesTo" sourceAnchorX="0.6513761467889908" sourceAnchorY="1.0" targetAnchorX="0.22282608695652173" targetAnchorY="0.5675675675675675">
     <source href="assembly.xml#StartHere"/>
     <target href="assembly.xml#PutIntegrationMessage"/>
@@ -22,5 +28,7 @@
     <elements href="assembly.xml#StartHere"/>
     <elements href="assembly.xml#PutIntegrationMessage"/>
     <elements href="assembly.xml#AsyncMediation"/>
+    <elements href="assembly.xml#//@beans/@mixed.1/@mixed.9"/>
+    <elements href="assembly.xml#AsyncMediation0"/>
   </swimlanes>
 </wdnm:Diagram>
