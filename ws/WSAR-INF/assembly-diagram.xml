@@ -24,6 +24,10 @@
     <source href="assembly.xml#PutIntegrationMessage"/>
     <target href="assembly.xml#AsyncMediation"/>
   </connections>
+  <connections type="routesTo" sourceAnchorX="1.0" sourceAnchorY="0.20212765957446807">
+    <source href="assembly.xml#AsyncMediation"/>
+    <target href="assembly.xml#EmailOut"/>
+  </connections>
   <swimlanes x="51" y="110" name="Swimlane">
     <elements href="assembly.xml#StartHere"/>
     <elements href="assembly.xml#PutIntegrationMessage"/>

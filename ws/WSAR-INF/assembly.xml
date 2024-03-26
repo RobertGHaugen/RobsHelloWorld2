@@ -46,7 +46,7 @@
       </cc:integration-system>
         </cc:workday-in>
         <cc:local-out id="PutIntegrationMessage" routes-response-to="AsyncMediation" endpoint="vm://wcc/PutIntegrationMessage"><cc:set name="is.message.severity" value="'INFO'"/><cc:set name="is.message.summary" value="'Hello' + ' ' + lp.getSimpleData('firstName')"/><cc:set name="is.message.detail" value="'========>  Hello ' + lp.getSimpleData('firstName') + ' ' + lp.getSimpleData('lastName') + ' ' + 'todays date is:  ' + lp.getSimpleData('currentDate') + ' ' + 'and you are ' + lp.getSimpleData('age') + ' years old'"/></cc:local-out>
-        <cc:async-mediation id="AsyncMediation">
+        <cc:async-mediation id="AsyncMediation" routes-to="EmailOut">
             <cc:steps>
                 <cc:eval id="Eval">
                     <cc:expression>props['pFirstName'] = lp.getSimpleData('firstName')</cc:expression>
@@ -71,5 +71,4 @@
             </cc:log-message>
         </cc:log-error>
     </cc:assembly>
-
 </beans>
