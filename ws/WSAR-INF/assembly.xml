@@ -62,5 +62,4 @@
                 </cc:log>
             </cc:steps>
         </cc:async-mediation></cc:assembly>
-
 </beans>
