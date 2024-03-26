@@ -10,9 +10,6 @@
   <visualProperties x="428" y="182">
     <element href="assembly.xml#AsyncMediation"/>
   </visualProperties>
-  <visualProperties x="628" y="163">
-    <element href="assembly.xml#EmailOut"/>
-  </visualProperties>
   <connections type="routesTo" sourceAnchorX="0.6513761467889908" sourceAnchorY="1.0" targetAnchorX="0.22282608695652173" targetAnchorY="0.5675675675675675">
     <source href="assembly.xml#StartHere"/>
     <target href="assembly.xml#PutIntegrationMessage"/>
@@ -21,14 +18,9 @@
     <source href="assembly.xml#PutIntegrationMessage"/>
     <target href="assembly.xml#AsyncMediation"/>
   </connections>
-  <connections type="routesTo" sourceAnchorX="1.0" sourceAnchorY="0.20212765957446807">
-    <source href="assembly.xml#AsyncMediation"/>
-    <target href="assembly.xml#EmailOut"/>
-  </connections>
   <swimlanes x="51" y="110" name="Swimlane">
     <elements href="assembly.xml#StartHere"/>
     <elements href="assembly.xml#PutIntegrationMessage"/>
     <elements href="assembly.xml#AsyncMediation"/>
-    <elements href="assembly.xml#EmailOut"/>
   </swimlanes>
 </wdnm:Diagram>
