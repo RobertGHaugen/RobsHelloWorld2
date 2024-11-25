@@ -52,6 +52,8 @@
                 </cc:eval>
             </cc:steps>
         </cc:async-mediation>
+        <cc:local-out id="PutIntegrationEvent" endpoint="vm://wcc/PutIntegrationEvent"><cc:set name="is.event.wid" value="lp.isSet() ? lp.getIntegrationEventWID() : null"/><cc:set name="is.system.wid" value="lp.isSet() ? lp.getIntegrationSystemRefWID() : null"/><cc:set name="is.process.desc"/><cc:set name="is.event.initiated"/><cc:set name="is.event.completed"/><cc:set name="is.response.msg"/><cc:set name="is.event.member.wids"/><cc:set name="is.percent.complete"/></cc:local-out>
+        <cc:local-in id="SubRoutine"/>
 	</cc:assembly>
 
 </beans>
