@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wdnm:Diagram xmlns:wdnm="http://workday.com/studio/editors/notation">
+  <element href="assembly.xml#WorkdayAssembly"/>
+  <visualProperties x="346" y="165">
+    <element href="assembly.xml#StartHere"/>
+  </visualProperties>
+  <visualProperties x="470" y="165">
+    <element href="assembly.xml#PutIntegrationMessage"/>
+  </visualProperties>
+  <visualProperties x="428" y="182">
+    <element href="assembly.xml#AsyncMediation"/>
+  </visualProperties>
+  <connections type="routesTo" sourceAnchorX="0.6513761467889908" sourceAnchorY="1.0" targetAnchorX="0.22282608695652173" targetAnchorY="0.5675675675675675">
+    <source href="assembly.xml#StartHere"/>
+    <target href="assembly.xml#PutIntegrationMessage"/>
+  </connections>
+  <connections type="routesResponseTo" sourceAnchorX="1.0" sourceAnchorY="0.6486486486486487" targetAnchorX="0.2097902097902098" targetAnchorY="0.1875">
+    <source href="assembly.xml#PutIntegrationMessage"/>
+    <target href="assembly.xml#AsyncMediation"/>
+  </connections>
+  <swimlanes x="51" y="110" name="Swimlane">
+    <elements href="assembly.xml#StartHere"/>
+    <elements href="assembly.xml#PutIntegrationMessage"/>
+    <elements href="assembly.xml#AsyncMediation"/>
+  </swimlanes>
+</wdnm:Diagram>

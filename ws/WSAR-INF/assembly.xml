@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+     xmlns="http://www.springframework.org/schema/beans"
+     xmlns:beans="http://www.springframework.org/schema/beans"
+     xmlns:atom="http://www.w3.org/2005/Atom"
+     xmlns:cc="http://www.capeclear.com/assembly/10"
+     xmlns:cloud="urn:com.workday/esb/cloud/10.0"
+     xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"
+     xmlns:pi="urn:com.workday/picof"
+     xmlns:wd="urn:com.workday/bsvc"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ 
+	<cc:assembly id="WorkdayAssembly" version="2023.15">
+        <cc:workday-in id="StartHere" routes-to="PutIntegrationMessage">
+            <cc:integration-system name="RobsHelloWorld2">
+        <cloud:param name="firstName">
+          <cloud:type>
+            <cloud:simple-type>text</cloud:simple-type>
+          </cloud:type>
+          <cloud:default>
+            <cloud:text>Rob</cloud:text>
+          </cloud:default>
+        </cloud:param>
+        <cloud:param name="lastName">
+          <cloud:type>
+            <cloud:simple-type>text</cloud:simple-type>
+          </cloud:type>
+          <cloud:default>
+            <cloud:text>Haugen</cloud:text>
+          </cloud:default>
+        </cloud:param>
+        <cloud:param name="currentDate">
+          <cloud:type>
+            <cloud:simple-type>date</cloud:simple-type>
+          </cloud:type>
+          <cloud:default/>
+        </cloud:param>
+        <cloud:param name="age">
+          <cloud:type>
+            <cloud:simple-type>number</cloud:simple-type>
+          </cloud:type>
+          <cloud:default/>
+        </cloud:param>
+      </cc:integration-system>
+        </cc:workday-in>
+        <cc:local-out id="PutIntegrationMessage" routes-response-to="AsyncMediation" endpoint="vm://wcc/PutIntegrationMessage"><cc:set name="is.message.severity" value="'INFO'"/><cc:set name="is.message.summary" value="'Hello' + ' ' + lp.getSimpleData('firstName')"/><cc:set name="is.message.detail" value="'========>  Hello ' + lp.getSimpleData('firstName') + ' ' + lp.getSimpleData('lastName') + ' ' + 'todays date is:  ' + lp.getSimpleData('currentDate') + ' ' + 'and you are ' + lp.getSimpleData('age') + ' years old'"/></cc:local-out>
+        <cc:async-mediation id="AsyncMediation">
+            <cc:steps>
+                <cc:eval id="Eval">
+                    <cc:expression>props['pFirstName'] = lp.getSimpleData('firstName')</cc:expression>
+                    <cc:expression>props['pLastName'] = lp.getSimpleData('lastName')</cc:expression>
+                </cc:eval>
+            </cc:steps>
+        </cc:async-mediation>
+	</cc:assembly>
+
+</beans>
